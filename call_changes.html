@@ -1,0 +1,41 @@
+<html>
+    <meta charset="UTF-8">
+    <head>
+        <title>Ubyssey Science Visualizations</title>
+        <!-- Link in head to the d3 library that I used and the js file with the data -->
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="covid_311_condensed_data.js"></script>
+    </head>
+
+    <body>
+        <!-- First chart: the <div> is the layout and the script is the link to the js code -->
+        <div id="covid_call_types_chart1">
+            <div id="chart_title"></div>
+            <div id="chart_body"></div>
+            <div id="chart_labels"></div>
+            <button onclick="updateChart1Height(1)">March 2020</button>
+            <button onclick = "updateChart1Height(2)">April 2020</button>    
+        </div>
+        <script src="covid19_calls_script.js"></script>
+
+        <!-- Second chart: lots and lots of buttons in the <div> and the link to its js code right under -->
+        <div id="mar_apr_comp_chart2">
+            <div id="chart_title"></div>
+            <div id="chart_keyword"></div>
+            <div id="chart_body"></div>
+            <div id="chart_labels"></div>
+            <button onclick="updateChart2Height('Total')">Total</button>
+            <button onclick="updateChart2Height('Complaint')">Complaint</button>
+            <button onclick="updateChart2Height('Event')">Event</button>
+            <button onclick="updateChart2Height('Film')">Film</button>
+            <button onclick="updateChart2Height('Traffic')">Traffic</button>
+            <br>
+            <button onclick="updateChart2Height('Transit')">Transit</button>
+            <button onclick="updateChart2Height('Noise complaint')">Noise complaint</button>
+            <button onclick="updateChart2Height('Homelessness')">Homelessness</button>
+            <button onclick="updateChart2Height('Donation')">Donation</button>
+            <button onclick="updateChart2Height('Volunteer')">Volunteer</button>
+        </div>
+        <script src="call_changes_script.js"></script>
+    </body>
+</html>
